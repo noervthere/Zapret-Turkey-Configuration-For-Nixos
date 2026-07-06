@@ -1,6 +1,9 @@
-NixOS Zapret DPI Bypass for Turkey (Discord & Roblox)A native, declarative NixOS script designed to automatically configure and deploy Zapret to bypass the Turkish Deep Packet Inspection (DPI) blocks on Discord (including Voice/RTC) and Roblox.  Unlike generic proxy/SOCKS solutions (like ByeDPI), this configuration utilizes native Linux kernel modules (NFQUEUE) to transparently fix both TCP and UDP packet streams system-wide without impacting your normal internet speed or latency.  🚀 FeaturesZero-Touch Automation: Automatically generates the configuration, handles your firewall rules, adds the module imports, and rebuilds your NixOS system.  Full UDP & Voice Support: Pre-configured port ranges (50000:65535 and STUN/TURN ports) to ensure Discord Voice (RTC) and Roblox game servers work perfectly without lagging out.  Anti-DNS Poisoning Protection: Deploys a system-wide, strict DNS-over-TLS (DoT) setup using systemd-resolved (Cloudflare/Google DNS) to counter Turkish ISP DNS manipulation.  Targeted Whitelist Mode: The DPI packet-splitting manipulation only triggers when communicating with official Discord or Roblox servers. All other internet traffic (Steam, YouTube, banking, etc.) passes through untouched.  Pre-tuned ISP Parameters: Uses optimized blockcheck values (--dpi-desync=fake --dpi-desync-ttl=3) explicitly known to work flawlessly against major Turkish ISPs like Turkcell Superonline.  🛠️ How It WorksWhen you run the install-zapret.sh script, it automates the following steps:Creates a standalone module at /etc/nixos/zapret-turkey.nix containing all necessary system services, kernel optimizations, DNS-over-TLS rules, and domain whitelists.  Modifies your local /etc/nixos/configuration.nix to include the new file inside your imports statement.  Executes a system switch command (nixos-rebuild switch) to cleanly fetch the packages and deploy the network configuration.  💾 InstallationClone this repository and run the setup script using sudo.Bash# Clone the repository
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-cd YOUR_REPO_NAME
+Easy Zapret installation for nixos built to bypass turkish bans.
+
+
+sudo.Bash# Clone the repository
+git clone https://github.com/noervthere/Zapret-Turkey-Configuration-For-Nixos
+cd Zapret-Turkey-Configuration-For-Nixos
 
 # Make the installer script executable
 chmod +x install-zapret.sh
