@@ -1,7 +1,8 @@
 Easy Zapret installation for nixos built to bypass turkish bans.
 
 
-sudo.Bash# Clone the repository
+İntallation;
+
 git clone https://github.com/noervthere/Zapret-Turkey-Configuration-For-Nixos
 cd Zapret-Turkey-Configuration-For-Nixos
 
