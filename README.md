@@ -1,7 +1,6 @@
 Zapret Turkey Configuration for NixOS
 
-A quick, hassle-free installer to deploy Zapret on NixOS, pre-configured to bypass regional network blocks and Deep Packet Inspection (DPI) in Turkey.
-⚡ Quick Start / Installation
+tr bans bypass nixos
 
 Follow these steps to clone the repository and run the automated installer:
 1. Clone the repository
