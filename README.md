@@ -6,12 +6,11 @@ git clone https://github.com/noervthere/Zapret-Turkey-Configuration-For-Nixos
 cd Zapret-Turkey-Configuration-For-Nixos
 
 # Make the installer script executable |
-# 2- 
-chmod +x install-zapret.sh
+# 2- chmod +x install-zapret.sh
+
 
 # Run the installer as root |
-# 3-
-sudo ./install-zapret.sh
+# 3- sudo ./install-zapret.sh
 
 
 🧹 Uninstallation / Reverting | Because this script relies on NixOS's declarative nature, reversing the changes is completely straightforward:Open your /etc/nixos/configuration.nix in your preferred editor: sudo nano /etc/nixos/configuration.nix
