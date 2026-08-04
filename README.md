@@ -1,23 +1,66 @@
-Easy Zapret installation for nixos built to bypass turkish bans.
+Zapret Turkey Configuration for NixOS
 
-# Installation |
-# 1-
+A quick, hassle-free installer to deploy Zapret on NixOS, pre-configured to bypass regional network blocks and Deep Packet Inspection (DPI) in Turkey.
+⚡ Quick Start / Installation
+
+Follow these steps to clone the repository and run the automated installer:
+1. Clone the repository
+Bash
+
 git clone https://github.com/noervthere/Zapret-Turkey-Configuration-For-Nixos
 cd Zapret-Turkey-Configuration-For-Nixos
 
-# Make the installer script executable |
-# 2- chmod +x install-zapret.sh
+2. Make the installer executable
+Bash
 
+chmod +x install-zapret.sh
 
-# Run the installer as root |
-# 3- sudo ./install-zapret.sh
+3. Run the installer
+Bash
 
+sudo ./install-zapret.sh
 
-🧹 Uninstallation / Reverting | Because this script relies on NixOS's declarative nature, reversing the changes is completely straightforward:Open your /etc/nixos/configuration.nix in your preferred editor: sudo nano /etc/nixos/configuration.nix
+🧹 Uninstallation & Reverting
 
-Locate and remove the line containing ./zapret-turkey.nix from your imports block.  Delete the configuration file entirely
+Thanks to the declarative nature of NixOS, completely purging Zapret and its associated firewall rules takes only a few seconds:
 
-Rebuild your system to completely purge the packages, firewall overrides, and kernel modules:
-sudo nixos-rebuild switch
+    Remove the import line
 
-⚠️ Disclaimer This script is provided as-is for educational and connectivity restoration purposes. Network environments can vary heavily across different locations, regions, and minor regional sub-providers within Turkey. If your connection still drops, you may need to manually adjust the --dpi-desync-ttl parameter inside your generated configuration file to better match your local ISP hop count.  
+    Open your main configuration file:
+    Bash
+
+    sudo nano /etc/nixos/configuration.nix
+
+    Locate and delete ./zapret-turkey.nix from your imports list.
+
+    Remove the configuration file
+    Bash
+
+    sudo rm /etc/nixos/zapret-turkey.nix
+
+    Rebuild your system
+
+    Purge active kernel modules, systemd services, and firewall overrides:
+    Bash
+
+    sudo nixos-rebuild switch
+
+⚙️ Troubleshooting & Tuning
+
+Network conditions and DPI setups can vary depending on your local ISP (Turk Telekom, Superonline, Kablonet, etc.) and region.
+
+If traffic is still being blocked or dropped after installation:
+
+    Open /etc/nixos/zapret-turkey.nix.
+
+    Find the --dpi-desync-ttl parameter.
+
+    Adjust its value up or down to better match your local network's hop count to the target server.
+
+    Apply changes with sudo nixos-rebuild switch.
+
+⚠️ Disclaimer
+
+    [!WARNING]
+
+    This repository and script are provided as-is for educational purposes and connectivity restoration. The maintainer is not responsible for any misuse or local policy violations.
