@@ -1,6 +1,6 @@
 # Zapret Turkey Configuration for NixOS
 
-> **Bypass Deep Packet Inspection (DPI) and regional blocks in Turkey on NixOS.**
+> **Bypass Deep Packet Inspection (DPI) and regional blocks in Turkey on NixOS.MADE FOR PERSONAL USE, YOU MIGHT HAVE TO TROUBLESHOOT**
 
 [![NixOS](https://img.shields.io/badge/NixOS-23.11%2B-blue?logo=nixos&logoColor=white)](https://nixos.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
