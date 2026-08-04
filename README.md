@@ -1,12 +1,19 @@
-Zapret Turkey Configuration for NixOS
+# Zapret Turkey Configuration for NixOS
 
-tr bans bypass nixos
+> **Bypass Deep Packet Inspection (DPI) and regional blocks in Turkey on NixOS.**
 
-Follow these steps to clone the repository and run the automated installer:
-1. Clone the repository
-Bash
+[![NixOS](https://img.shields.io/badge/NixOS-23.11%2B-blue?logo=nixos&logoColor=white)](https://nixos.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-git clone https://github.com/noervthere/Zapret-Turkey-Configuration-For-Nixos
+---
+
+## ⚡ Quick Start / Installation
+
+Run these commands in your terminal to clone and install:
+
+### 1. Clone the repository
+```bash
+git clone [https://github.com/noervthere/Zapret-Turkey-Configuration-For-Nixos](https://github.com/noervthere/Zapret-Turkey-Configuration-For-Nixos)
 cd Zapret-Turkey-Configuration-For-Nixos
 
 2. Make the installer executable
