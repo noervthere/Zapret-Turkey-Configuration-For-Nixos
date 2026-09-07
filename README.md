@@ -13,17 +13,17 @@ Run these commands in your terminal to clone and install:
 ### 1. Clone the repository
 ```bash
 git clone [https://github.com/noervthere/Zapret-Turkey-Configuration-For-Nixos](https://github.com/noervthere/Zapret-Turkey-Configuration-For-Nixos)
-cd Zapret-Turkey-Configuration-For-Nixos
+cd Zapret-Turkey-Configuration-For-Nixos```
 
 2. Make the installer executable
-Bash
+```Bash
 
-chmod +x install-zapret.sh
+chmod +x install-zapret.sh```
 
 3. Run the installer
-Bash
+```Bash
 
-sudo ./install-zapret.sh
+sudo ./install-zapret.sh```
 
 🧹 Uninstallation & Reverting
 
