@@ -27,31 +27,6 @@ chmod +x install-zapret.sh
 sudo ./install-zapret.sh
 ```
 
-🧹 Uninstallation & Reverting
-
-Thanks to the declarative nature of NixOS, completely purging Zapret and its associated firewall rules takes only a few seconds:
-
-    Remove the import line
-
-    Open your main configuration file:
-    Bash
-
-    sudo nano /etc/nixos/configuration.nix
-
-    Locate and delete ./zapret-turkey.nix from your imports list.
-
-    Remove the configuration file
-    Bash
-
-    sudo rm /etc/nixos/zapret-turkey.nix
-
-    Rebuild your system
-
-    Purge active kernel modules, systemd services, and firewall overrides:
-    Bash
-
-    sudo nixos-rebuild switch
-
 ⚙️ Troubleshooting & Tuning
 
 Network conditions and DPI setups can vary depending on your local ISP (Turk Telekom, Superonline, Kablonet, etc.) and region.
